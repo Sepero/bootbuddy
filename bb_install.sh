@@ -1,7 +1,7 @@
 #!/system/xbin/sh
 # boot-buddy.sh [--uninstall]
 
-# Boot Buddy v1.2
+# Boot Buddy v1.3
 # Licensed GNU GPL v2, Author Sepero
 
 ID=$(id | sed 's/[^=]*=//;s/\([0-9]*\).*/\1/')
