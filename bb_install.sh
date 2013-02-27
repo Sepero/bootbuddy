@@ -14,6 +14,10 @@ chmod 755 $BB_FILE
 busybox sh $BB_FILE"
 IR_TAIL="# bootbuddy boot script end"
 
+SHELL="/system/xbin/sh"
+[ -f $SHELL ] || SHELL="/system/bin/sh"
+[ -f $SHELL ] || exit_error "System shell could not be found: $SHELL"
+
 exit_error () {
   echo "$@" >&2
 	exit 127
@@ -23,13 +27,13 @@ exit_error () {
 [ $ID == "0" ] || exit_error "You're not root"
 
 # Check for busy box
-[ -f /system/xbin/busybox ] || exit_error "Busybox was not found"
+[ -f /system/bin/busybox -o -f /system/xbin/busybox ] || exit_error "Busybox was not found"
 
 # Remount the system as writable.
 echo "Remounting /system as writable"
 busybox mount -o remount,rw /system
 
-# Remove file traces if uninstalling.
+# If uninstalling, then remove file traces and exit.
 if [ "$1" == "--uninstall" ]; then
 	echo "Deleting $BB_FILE"
 	rm $BB_FILE 2> /dev/null
