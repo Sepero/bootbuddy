@@ -1,7 +1,8 @@
 # boot-buddy.sh [--uninstall]
 
 # Boot Buddy v1.3
-# Licensed GNU GPL v2, Author Sepero
+# Licensed GNU GPL v2, Author Sepero - sepero 111 @ gmail . com
+# https://github.com/Sepero/bootbuddy/
 
 # Setup global variables.
 ID=$(id | sed 's/[^=]*=//;s/\([0-9]*\).*/\1/')
