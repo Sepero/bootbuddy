@@ -4,6 +4,9 @@ Boot Buddy will allow you to run Linux shell scripts when your Android device is
 
 The intended audience is generally intermediate to advanced users, and those who want to play with shell scripting on their device.
 
+Author: Sepero - Remote Python developer and Linux administrator for hire.  
+Email: sepero 111 @ gmail . com  
+URL: https://github.com/Sepero/bootbuddy/edit/  
 
 ## FEATURES
 BootBuddy is similar to init.d scripts, but with a core difference that it stores boot scripts on your SDcard instead of the internal system. This allows for several interesting enhancements. Feature listing-
