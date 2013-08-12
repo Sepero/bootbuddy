@@ -6,7 +6,7 @@ The intended audience is generally intermediate to advanced users, and those who
 
 Author: Sepero - Remote Python developer and Linux administrator for hire.  
 Email: sepero 111 @ gmail . com  
-URL: https://github.com/Sepero/bootbuddy/edit/  
+URL: https://github.com/Sepero/bootbuddy/  
 
 ## FEATURES
 BootBuddy is similar to init.d scripts, but with a core difference that it stores boot scripts on your SDcard instead of the internal system. This allows for several interesting enhancements. Feature listing-
