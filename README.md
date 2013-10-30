@@ -5,7 +5,7 @@ Boot Buddy will allow you to run Linux shell scripts when your Android device is
 The intended audience is generally intermediate to advanced users, and those who want to play with shell scripting on their device.
 
 Author: Sepero - Remote Python developer and Linux administrator for hire.  
-Email: sepero 111 @ gmail . com  
+Email: sepero 111 @ gmx . com  
 URL: https://github.com/Sepero/bootbuddy/  
 
 ## FEATURES
