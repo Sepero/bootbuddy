@@ -1,7 +1,7 @@
 # boot-buddy.sh [--uninstall]
 
 # Boot Buddy v1.3
-# Licensed GNU GPL v2, Author Sepero - sepero 111 @ gmail . com
+# Licensed GNU GPL v2, Author Sepero - sepero 111 @ gmx . com
 # https://github.com/Sepero/bootbuddy/
 
 # Setup global variables.
