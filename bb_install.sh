@@ -1,6 +1,6 @@
 # boot-buddy.sh [--uninstall]
 
-# Boot Buddy v1.3.1
+# Boot Buddy v1.3.2
 # Licensed GNU GPL v2, Author Sepero - sepero 111 @ gmx . com
 # https://github.com/Sepero/bootbuddy/
 
@@ -50,11 +50,14 @@ IR_TAIL="# bootbuddy boot script end"
 
 # Try to find location of the real sdcard. It should be in $EXTERNAL_STORAGE, 
 # but some manufacturers put it under other names.
-SDCARD="$EXTERNAL_STORAGE" # Kyocera, Motorola
-for i in "$EXTERNAL_ADD_STORAGE"     # LG Esteem, LG L9
-            "$SECONDARY_STORAGE";     # Samsung Galaxy S4
+for i in    "$EXTERNAL_STORAGE"       # Kyocera, Motorola
+            "$EXTERNAL_STORAGE2"      # ?
+            "$EXTERNAL_ADD_STORAGE"   # LG Esteem, LG L9
+            "$SECONDARY_STORAGE"      # Samsung Galaxy S4
             "$SECOND_VOLUME_STORAGE"  # Insignia Flex 8
-do
+            "$USBHOST_STORAGE"        # ?
+            "$PHONE_STORAGE"          # ?
+; do
     [ -n "$i" ] && SDCARD="$i" # If the variable is set, then use it as our sdcard.
 done
 ### End setting up global variables.
