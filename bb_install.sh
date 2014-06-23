@@ -67,6 +67,11 @@ for i in    "$EXTERNAL_STORAGE"      \
 ; do
     [ -n "$i" ] && SDCARD="$i" # If the variable is set, then use it as our sdcard.
 done
+
+if [ "$1" == "-s" ]; do # Change $SDCARD to user specified sdcard location.
+    SDCARD="$2"
+    shift; shift
+fi
 ### End setting up global variables.
 
 
