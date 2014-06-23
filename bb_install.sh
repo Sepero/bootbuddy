@@ -50,13 +50,20 @@ IR_TAIL="# bootbuddy boot script end"
 
 # Try to find location of the real sdcard. It should be in $EXTERNAL_STORAGE, 
 # but some manufacturers put it under other names.
-for i in    "$EXTERNAL_STORAGE"       # Kyocera, Motorola
-            "$EXTERNAL_STORAGE2"      # ?
-            "$EXTERNAL_ADD_STORAGE"   # LG Esteem, LG L9
-            "$SECONDARY_STORAGE"      # Samsung Galaxy S4
-            "$SECOND_VOLUME_STORAGE"  # Insignia Flex 8
-            "$USBHOST_STORAGE"        # ?
-            "$PHONE_STORAGE"          # ?
+# "$EXTERNAL_STORAGE"       # Kyocera, Motorola
+# "$EXTERNAL_STORAGE2"      # ?
+# "$EXTERNAL_ADD_STORAGE"   # LG Esteem, LG L9
+# "$SECONDARY_STORAGE"      # Samsung Galaxy S4
+# "$SECOND_VOLUME_STORAGE"  # Insignia Flex 8
+# "$USBHOST_STORAGE"        # ?
+# "$PHONE_STORAGE"          # ?
+for i in    "$EXTERNAL_STORAGE"      \
+            "$EXTERNAL_STORAGE2"     \
+            "$EXTERNAL_ADD_STORAGE"  \
+            "$SECONDARY_STORAGE"     \
+            "$SECOND_VOLUME_STORAGE" \
+            "$USBHOST_STORAGE"       \
+            "$PHONE_STORAGE"         \
 ; do
     [ -n "$i" ] && SDCARD="$i" # If the variable is set, then use it as our sdcard.
 done
