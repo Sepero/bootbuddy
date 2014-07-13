@@ -1,4 +1,4 @@
-# boot-buddy.sh [--uninstall]
+# boot-buddy.sh [-s /path/to/sdcard] [--uninstall]
 
 # Boot Buddy v1.3.2
 # Licensed GNU GPL v2, Author Sepero - sepero 111 @ gmx . com
@@ -16,7 +16,6 @@ exit_success () {
     echo "Remounting /system as read only"
     $BUSYB mount -o remount,ro /system
     $BUSYB echo -e "\nFinished"
-    $BUSYB echo -e "\nPut scripts you want to run at boot in the folder $BB_DIR"
     exit
 }
 
@@ -142,5 +141,7 @@ delay_for_sd&" > $BB_FILE
 
 
 echo "Setting up folder $SDCARD/$BB_DIR"
-mkdir "$SDCARD/$BB_DIR" 2> /dev/null
+mkdir -p "$SDCARD/$BB_DIR"
+$BUSYB echo -e "\nPut scripts you want to run at boot in the folder $BB_DIR"
 
+exit_success
